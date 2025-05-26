@@ -1,0 +1,13 @@
+<svg width="300" height="100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="neonShadowGreen" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#39ff14" flood-opacity="0.7"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#29b311" flood-opacity="0.5"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="9" flood-color="#1a6e0b" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <text x="50%" y="60" text-anchor="middle" font-family="Arial, Helvetica, sans-serif"
+    font-size="48" fill="#39ff14" filter="url(#neonShadowGreen)" font-weight="bold">
+    shopify
+  </text>
+</svg>

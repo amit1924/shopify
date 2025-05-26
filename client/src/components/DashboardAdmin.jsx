@@ -236,7 +236,7 @@ const DashboardAdmin = () => {
     );
 
   return (
-    <div className="min-h-screen p-4 max-w-7xl mx-auto bg-gray-900 text-gray-100">
+    <div className="min-h-screen p-4 max-w-7xl mx-auto bg-gray-900 text-gray-100 mt-[75px]">
       {/* Animated background elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         {[...Array(10)].map((_, i) => (

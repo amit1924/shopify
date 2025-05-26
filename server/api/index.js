@@ -23,9 +23,29 @@ app.use(cookieParser());
 //   })
 // );
 
+// app.use(
+//   cors({
+//     origin: "https://shopifyclient.vercel.app",
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     credentials: true,
+//   })
+// );
+
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://shopifyclient.vercel.app",
+];
+
 app.use(
   cors({
-    origin: "https://shopifyclient.vercel.app",
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        // Allow requests with no origin (like Postman) or allowed origins
+        callback(null, true);
+      } else {
+        callback(new Error("CORS policy: This origin is not allowed"));
+      }
+    },
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })

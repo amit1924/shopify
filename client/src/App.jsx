@@ -4,7 +4,7 @@ import Login from "./components/Login";
 import DashboardAdmin from "./components/DashboardAdmin";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoute";
-import { Toaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { motion, AnimatePresence } from "framer-motion";
 import NotFound from "./components/NotFound";
 import AuthContext from "./context/userContext";
@@ -20,6 +20,16 @@ const App = () => {
 
   const handleLogout = () => {
     logout();
+    toast.success("Logged out successfully", {
+      duration: 3000,
+      position: "top-center",
+      style: {
+        background: "#111827",
+        color: "#fff",
+        border: "1px solid #065f46",
+        boxShadow: "0 0 15px rgba(16, 185, 129, 0.3)",
+      },
+    });
   };
 
   return (
@@ -73,7 +83,7 @@ const App = () => {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <ProtectedRoute adminOnly>
+                  <ProtectedRoute adminOnly={true}>
                     <DashboardAdmin />
                   </ProtectedRoute>
                 </motion.div>

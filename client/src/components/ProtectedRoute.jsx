@@ -50,7 +50,7 @@ const ProtectedRoute = ({ children, adminOnly = false }) => {
 
   // If route is admin-only and user is not admin, redirect to home
   if (adminOnly && user.role !== "admin") {
-    toast.error("Admin access required");
+    // toast.error("Admin access required");
     return <Navigate to="/" replace />;
   }
 
