@@ -618,6 +618,7 @@ const Products = () => {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
+              aria-label={`Go to slide ${index + 1}`}
               className={`w-3 h-3 rounded-full transition-all ${
                 currentSlide === index
                   ? "bg-white w-6"

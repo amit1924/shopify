@@ -1,0 +1,19 @@
+<svg width="400" height="400" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="neon-green-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#00ff88" flood-opacity="1"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#00ff88" flood-opacity="0.8"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="20" flood-color="#00ff88" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+  <g filter="url(#neon-green-glow)">
+    <!-- Briefcase body -->
+    <rect x="24" y="40" width="80" height="60" rx="8" ry="8" fill="#111" stroke="#00ff88" stroke-width="4"/>
+    
+    <!-- Handle -->
+    <rect x="48" y="24" width="32" height="16" rx="4" ry="4" fill="#111" stroke="#00ff88" stroke-width="4"/>
+
+    <!-- Horizontal strap line -->
+    <line x1="24" y1="60" x2="104" y2="60" stroke="#00ff88" stroke-width="3"/>
+  </g>
+</svg>

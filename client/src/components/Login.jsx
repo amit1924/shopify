@@ -1,73 +1,8 @@
-// import React, { useState } from "react";
-// import { useContext } from "react";
-// import AuthContext from "../context/userContext";
-// import { useNavigate } from "react-router-dom";
-
-// const Login = () => {
-//   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
-//   const { login } = useContext(AuthContext);
-//   const navigate = useNavigate();
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     try {
-//       const response = await login(email, password);
-//       console.log("Login successful:", response);
-//       navigate("/dashboard");
-//     } catch (error) {
-//       console.error("Login error:", error);
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <h2>Login</h2>
-//       <form onSubmit={handleSubmit}>
-//         <br />
-//         <br />
-//         <br />
-//         <div>
-//           <label htmlFor="email">Email</label>
-//           <input
-//             type="email"
-//             id="email"
-//             name="email"
-//             required
-//             value={email}
-//             onChange={(e) => setEmail(e.target.value)}
-//           />
-//         </div>
-//         <br />
-//         <br />
-//         <br />
-//         <div>
-//           <label htmlFor="password">Password</label>
-//           <input
-//             type="password"
-//             id="password"
-//             name="password"
-//             required
-//             value={password}
-//             onChange={(e) => setPassword(e.target.value)}
-//           />
-//         </div>
-//         <br />
-//         <br />
-//         <br />
-//         <button type="submit">Login</button>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default Login;
-
 import React, { useState } from "react";
 
 import { useContext } from "react";
 import AuthContext from "../context/userContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaUser, FaLock, FaSignInAlt } from "react-icons/fa";
 import { toast } from "react-hot-toast";
@@ -228,12 +163,12 @@ const Login = () => {
               transition={{ delay: 0.5, duration: 0.4 }}
             >
               Don't have an account?{" "}
-              <a
-                href="/register"
+              <Link
+                to="/register"
                 className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-200"
               >
                 Register here
-              </a>
+              </Link>
             </motion.div>
           </div>
         </div>
