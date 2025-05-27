@@ -107,7 +107,7 @@ const ProductDetail = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="w-full overflow-x-hidden px-4 sm:px-6 py-4 sm:py-8"
+      className="w-full overflow-x-hidden px-4 sm:px-6 py-4 sm:py-8 mt-[75px]"
     >
       <div className="flex items-center mb-4 sm:mb-6 w-full">
         <Link
